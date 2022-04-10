@@ -1,0 +1,158 @@
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'quinquefive';
+	src: url('Quinquefive.ttf') format('truetype');
+}
+/* https://fonts.google.com/specimen/Modak?query=Ek+Type&preview.text=the%20begining&preview.text_type=custom */
+
+:root {
+	--black: #110d10;
+	--dark: #5f2f45;
+	--bold: #df8038;
+}
+
+main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+::selection {
+	background-color: var(--bold);
+	color: var(--black);
+}
+
+body {
+	background-color: var(--black);
+	color: #e1b473;
+	font-family: 'Varela Round', sans-serif;
+}
+
+h1 {
+	font-size: 6rem;
+	line-height: 0.9;
+	font-weight: 400;
+}
+h2 {
+	font-size: 3rem;
+}
+h3 {
+	font-size: 2rem;
+	font-weight: 400 !important;
+	font-family: 'Modak', cursive;
+}
+h1, h2 {
+	font-family: 'Modak', cursive;
+	color: var(--bold);
+	font-weight: 400 !important;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.6rem;
+	max-width: 600px;
+}
+a {
+	color: inherit;
+	color: var(--bold);
+}
+a:visited {
+	color: var(--bold);
+}
+
+/* 
+*		GENERAL
+*/
+section {
+	margin: 3rem 0;
+	padding: 3rem 1rem;
+}
+
+/* 
+*		BOX
+*/
+.box {
+	padding: 1.5rem;
+	/* display: inline-block; */
+
+	background-color: var(--black);
+	border: 2px solid var(--dark);
+	-webkit-box-shadow: 10px 10px 0px 0px var(--dark);
+	-moz-box-shadow: 10px 10px 0px 0px var(--dark);
+	box-shadow: 10px 10px 0px 0px var(--dark);
+
+	transition: .3s all;
+}
+.box:hover {
+	transform: translateY(10px);
+	transform: translateX(10px);
+	box-shadow: none;
+}
+
+
+/* 
+*		HEADER
+*/
+header {
+	min-height: 100vh;
+
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	text-align: center;
+}
+
+/* 
+*		INTRO
+*/
+.intro {
+	background-color: var(--black);
+	background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23241c22' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+	border: 1px solid var(--bold);
+	transition: .3s all;
+	text-align: center;
+}
+.intro:hover {
+	background-image: none;
+	background-color: var(--bold);
+}
+.intro:hover h2 {
+	color: var(--black) !important;
+}
+
+/* 
+*		TIME
+*/
+.history {
+	background-color: var(--black);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='Artboard-5' fill='%23241c22' fill-opacity='1' fill-rule='nonzero'%3E%3Cpath d='M6 18h12V6H6v12zM4 4h16v16H4V4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.time {
+	margin: 3rem 0 5rem;
+}
+.time-title {
+	margin-bottom: 1rem;
+}
+.time h3 {
+	margin-top: 1rem;
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 4rem;
+		line-height: 0.9;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+}
